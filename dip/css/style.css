@@ -1,0 +1,44 @@
+.corpus{
+    //width:400px;
+    //height:800px;
+    border:1px solid rgb(22, 20, 20);
+    background:rgb(255, 255, 255);
+    border-radius:5px;
+    margin:0 auto;
+}
+
+body{
+    //background-color:brown;
+}
+
+.display{
+    //width:350px;
+    height:3rem;
+    //border:1px solid rgb(0, 0, 0);
+    //background:rgb(255, 255, 255);
+    border-radius:5px;
+    text-align:right;
+}
+
+.keyboard{
+    //width:350px;
+    //height:500px;
+    //border:1px solid rgb(0, 0, 0);
+    background:rgb(255, 255, 255);
+    border-radius:5px;
+
+}
+
+.btn_key_oper, .btn_key_num{
+    //width:60px;
+    //height:70px;
+    //border:1px solid rgb(0, 0, 0);
+    //background:rgba(255, 255, 255);
+    //border-radius:15px;
+
+}
+
+#displayInfo{
+    color:rgb(0, 0, 0);
+    font-size: xx-large;
+}
