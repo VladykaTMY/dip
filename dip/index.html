@@ -11,12 +11,13 @@
     <title>Дипломная работа</title>
   </head>
   <body>
+      <header>
       <!--Начало навигационной панели-->
       <div class="fixed-top mb-3">
         <div class="collapse" id="navbarToggleExternalContent">
           <div class="bg-dark p-4">
-            <h5 class="text-white h4">Свернутый контент</h5>
-            <span class="text-muted">Переключаемый через бренд навигационной панели.</span>
+            <h5 class="text-white h4">Дипломная работа "Страница с калькулятором"</h5>
+            <span class="text-muted">Лавлинский</span>
           </div>
         </div>
         <nav class="navbar navbar-dark bg-dark">
@@ -26,9 +27,9 @@
         </nav>
       </div>
     <!--Конец навигационной панели-->
-
+      </header>
     <!--Начало слайдера-->
-    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+    <div id="carouselExampleIndicators" class="carousel slide mt-5" data-ride="carousel">
         <ol class="carousel-indicators">
           <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
           <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
@@ -39,10 +40,10 @@
             <img src="img/calc_0.jpg" class="d-block w-100" alt="...">
           </div>
           <div class="carousel-item">
-            <img src="img/calc_1.jpg" class="d-block w-100" alt="...">
+            <img src="img/calc_3.jpg" class="d-block w-100" alt="...">
           </div>
           <div class="carousel-item">
-            <img src="img/calc_2.jpg" class="d-block w-100" alt="...">
+            <img src="img/calc_4.jpg" class="d-block w-100" alt="...">
           </div>
         </div>
         <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -58,8 +59,15 @@
 
     
 
+    <!--Begin Jumbotron-->
+    <div class="jumbotron jumbotron-fluid mt-3">
+        <div class="container">
+          <h1 class="display-4">Калькуля́тор</h1>
+          <p class="lead">(лат. calculātor «счётчик») — электронное вычислительное устройство для выполнения операций над числами или алгебраическими формулами.</p>
+        </div>
+
     <!--Начало калькулятора-->
-    <div class="container bg-white">
+    <!--<div class="container bg-white">-->
         <div class="row">
             <div class="col-sm-12">
               <!--Начало корпуса калькулятора-->
@@ -79,16 +87,16 @@
                             <!--начало 1 строки на клавиатуре -->
                           <div class="row p-1">
                             <div class="col-sm-3">
-                              <button type="button" class="btn btn_key_num btn-outline-secondary btn-block" value="log">log</button>
+                              <button type="button" class="btn btn_key_oper btn-outline-secondary btn-block" data-toggle="tooltip" data-placement="right" title="Логарифм" onclick="calcLog()">log</button>
                             </div>
                             <div class="col-sm-3">
-                                <button type="button" class="btn btn_key_num btn-outline-secondary btn-block" value="%">%</button>
+                                <button type="button" class="btn btn_key_oper btn-outline-secondary btn-block" data-toggle="tooltip" data-placement="right" title="Квадратный корень" onclick="calcSqrt()">√</button>
                             </div>
                             <div class="col-sm-3">
-                                <button type="submit" class="btn btn_key_num btn-outline-secondary btn-block" value="**">^</button>
+                                <button type="button" class="btn btn_key_oper btn-outline-success btn-block" data-toggle="tooltip" data-placement="right" title="Возведение в степень" value="**">^</button>
                             </div>
                             <div class="col-sm-3">
-                                <button type="button" class="btn btn_key_num btn-outline-secondary btn-block" value="√">√</button>
+                                <button type="button" class="btn btn_key_oper btn-outline-success btn-block" data-toggle="tooltip" data-placement="right" title="Остаток от делания" value="%">%</button>
                             </div>
                           </div>
                           <!--конец 1 строки на клавиатуре -->
@@ -96,16 +104,16 @@
                           <!--начало 2 строки  на клавиатуре-->
                           <div class="row p-1">
                             <div class="col-sm-3">
-                              <button type="button" class="btn btn_key_num btn-outline-success btn-block" value="-">-</button>
+                              <button type="button" class="btn btn_key_oper btn-outline-success btn-block"  data-toggle="tooltip" data-placement="right" title="Вычитание" value="-">-</button>
                             </div>
                             <div class="col-sm-3">
-                                <button type="button" class="btn btn_key_num btn-outline-success btn-block" value="+">+</button>
+                                <button type="button" class="btn btn_key_oper btn-outline-success btn-block" data-toggle="tooltip" data-placement="right" title="Сложение" value="+">+</button>
                             </div>
                             <div class="col-sm-3">
-                                <button type="button" class="btn btn_key_num btn-outline-success btn-block" value="/">/</button>
+                                <button type="button" class="btn btn_key_oper btn-outline-success btn-block" data-toggle="tooltip" data-placement="right" title="Деление" value="/">/</button>
                             </div>
                             <div class="col-sm-3">
-                                <button type="button" class="btn btn_key_num btn-outline-success btn-block" value="*">*</button>
+                                <button type="button" class="btn btn_key_oper btn-outline-success btn-block" data-toggle="tooltip" data-placement="right" title="Умножение" value="*">*</button>
                             </div>
                           </div>
                           <!--конец 2 строки  на клавиатуре-->
@@ -113,16 +121,16 @@
                           <!--начало 3 строки  на клавиатуре-->
                           <div class="row p-1">
                             <div class="col-sm-3">
-                              <button type="button" class="btn btn_key_num btn-outline-primary btn-block" value="7">7</button>
+                              <button type="button" class="btn btn_key_num btn-outline-primary btn-block" data-toggle="tooltip" data-placement="right" title="Цифра 7" value="7">7</button>
                             </div>
                             <div class="col-sm-3">
-                                <button type="button" class="btn btn_key_num btn-outline-primary btn-block" value="8">8</button>
+                                <button type="button" class="btn btn_key_num btn-outline-primary btn-block" data-toggle="tooltip" data-placement="right" title="Цифра 8" value="8">8</button>
                             </div>
                             <div class="col-sm-3">
-                                <button type="button" class="btn btn_key_num btn-outline-primary btn-block" value="9">9</button>
+                                <button type="button" class="btn btn_key_num btn-outline-primary btn-block" data-toggle="tooltip" data-placement="right" title="Цифра 9" value="9">9</button>
                             </div>
                             <div class="col-sm-3">
-                                <button type="button" class="btn btn_key_num btn-outline-success btn-block" value="(">(</button>
+                                <button type="button" class="btn btn_key_oper btn-outline-secondary btn-block" data-toggle="tooltip" data-placement="right" title="Открывающая Скобка" value="(">(</button>
                             </div>
                           </div>
                           <!--конец 3 строки на клавиатуре -->
@@ -130,16 +138,16 @@
                           <!--начало 4 строки на клавиатуре -->
                           <div class="row p-1">
                             <div class="col-sm-3">
-                              <button type="button" class="btn btn_key_num btn-outline-primary btn-block" value="4">4</button>
+                              <button type="button" class="btn btn_key_num btn-outline-primary btn-block" data-toggle="tooltip" data-placement="right" title="Цифра 4" value="4">4</button>
                             </div>
                             <div class="col-sm-3">
-                                <button type="button" class="btn btn_key_num btn-outline-primary btn-block" value="5">5</button>
+                                <button type="button" class="btn btn_key_num btn-outline-primary btn-block" data-toggle="tooltip" data-placement="right" title="Цифра 5" value="5">5</button>
                             </div>
                             <div class="col-sm-3">
-                                <button type="button" class="btn btn_key_num btn-outline-primary btn-block" value="6">6</button>
+                                <button type="button" class="btn btn_key_num btn-outline-primary btn-block" data-toggle="tooltip" data-placement="right" title="Цифра 6" value="6">6</button>
                             </div>
                             <div class="col-sm-3">
-                                <button type="button" class="btn btn_key_num btn-outline-success btn-block" value=")">)</button>
+                                <button type="button" class="btn btn_key_oper btn-outline-secondary btn-block" data-toggle="tooltip" data-placement="right" title="Закрывающая скобка" value=")">)</button>
                             </div>
                           </div>
                           <!--конец 4 строки  на клавиатуре-->
@@ -147,33 +155,33 @@
                           <!--начало 5 строки  на клавиатуре-->
                           <div class="row p-1">
                             <div class="col-sm-3">
-                              <button type="button" class="btn btn_key_num btn-outline-primary btn-block" value="1">1</button>
+                              <button type="button" class="btn btn_key_num btn-outline-primary btn-block" data-toggle="tooltip" data-placement="right" title="Цифра 3" value="1">1</button>
                             </div>
                             <div class="col-sm-3">
-                                <button type="button" class="btn btn_key_num btn-outline-primary btn-block" value="2">2</button>
+                                <button type="button" class="btn btn_key_num btn-outline-primary btn-block" data-toggle="tooltip" data-placement="right" title="Цифра 2" value="2">2</button>
                             </div>
                             <div class="col-sm-3">
-                                <button type="button" class="btn btn_key_num btn-outline-primary btn-block" value="3">3</button>
+                                <button type="button" class="btn btn_key_num btn-outline-primary btn-block" data-toggle="tooltip" data-placement="right" title="Цифра 1" value="3">3</button>
                             </div>
                            <div class="col-sm-3">
-                                <button type="reset" class="btn btn_key_oper btn-outline-danger btn-block" data-toggle="tooltip" data-placement="right" title="Сброс" onclick="clearValue()">AC</button>
+                                <button type="reset" class="btn btn_key_oper btn-outline-danger btn-block" data-toggle="tooltip" data-placement="right" title="Сброс" onclick="cleanValue()">AC</button>
                             </div>
                           </div>
                           <!--конец 5 строки на клавиатуре-->
 
                           <!--начало 6 строки на клавиатуре -->
                           <div class="row p-1">
-                            <div class="col-sm-3">
+                            <!--<div class="col-sm-3">
                               <button type="button" class="btn btn_key_num btn-outline-secondary btn-block" data-toggle="tooltip" data-placement="right" title="Число Пи" value="3.14">π</button>
+                            </div>-->
+                            <div class="col-sm-3">
+                                <button type="button" class="btn btn_key_num btn-outline-primary btn-block" data-toggle="tooltip" data-placement="right" title="Цифра 0" value="0" >0</button>
                             </div>
                             <div class="col-sm-3">
-                                <button type="button" class="btn btn_key_num btn-outline-primary btn-block" value="0" >0</button>
+                                <button type="button" class="btn btn_key_oper btn-outline-secondary btn-block" data-toggle="tooltip" data-placement="right" title="Десятичная дробь" value=".">.</button>
                             </div>
-                            <div class="col-sm-3">
-                                <button type="button" class="btn btn_key_num btn-outline-secondary btn-block" value=".">.</button>
-                            </div>
-                            <div class="col-sm-3">
-                                <button type="button" class="btn btn_key_num btn-outline-danger btn-block"  onclick="calcValue()">=</button>
+                            <div class="col-sm-6">
+                                <button type="button" class="btn btn_key_oper btn-outline-danger btn-block"  data-toggle="tooltip" data-placement="right" title="Равно" onclick="calcValue(),getLastValue()">=</button>
                             </div>
                           </div>
                           <!--конец 6 строки на клавиатуре-->
@@ -184,54 +192,45 @@
               <!--Конец корпуса калькулятора-->
             </div>
         </div>
-    </div>
+    <!--</div>-->
     <!--конец калькулятора-->
 
-    <!--Begin Jumbotron-->
-    <div class="jumbotron jumbotron-fluid mt-3">
-        <div class="container">
-          <h1 class="display-4">Калькуля́тор</h1>
-          <p class="lead">(лат. calculātor «счётчик») — электронное вычислительное устройство для выполнения операций над числами или алгебраическими формулами.</p>
-        </div>
-      </div>
-    <!--End Jumborton-->
-
     <!--Начало таблицы-->
-    <table class="table table-dark">
-        <thead>
+    <table class="table my-3 text-center" id="tbl" >
+        <thead class="thead-dark">
           <tr>
-            <th scope="col">#</th>
-            <th scope="col">First</th>
-            <th scope="col">Last</th>
-            <th scope="col">Handle</th>
+            <!--<th scope="col">#</th>-->
+            <th scope="col">Последнее вычисление</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <th scope="row">1</th>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
-          </tr>
+            <!--<th scope="row">1</th>-->
+            <td>Выполните операцию</td>
+           
+          <!--</tr>
           <tr>
             <th scope="row">2</th>
-            <td>Jacob</td>
-            <td>Thornton</td>
-            <td>@fat</td>
+            <td>`{displayInfo.innerText}`</td>
+            
           </tr>
           <tr>
             <th scope="row">3</th>
-            <td>Larry</td>
-            <td>the Bird</td>
-            <td>@twitter</td>
-          </tr>
+            <td>4</td>
+          </tr>-->
         </tbody>
       </table>
-    <!--Конец Таблицы-->
-    <div class="footer bg-light">
-        <p>Копирайт</p>
-    </div>
+    <!--Конец таблицы-->
+      </div>
+    <!--End Jumborton-->
+
+    
     <!--Начало футера-->
+    <footer class="footer bg-dark fixed-bottom text-center">
+        <div class="container">
+          <span class="text-muted">2021©Специально для ГБОУ ДПО Центр «Профессионал» </span>
+        </div>
+    </footer>
     <!--Конец футера-->
     <!-- Optional JavaScript; choose one of the two! -->
 
